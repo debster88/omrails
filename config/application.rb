@@ -21,6 +21,6 @@ module Omrails
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
+    config.app_generators.scaffold_controller = :scaffold_controller
   end
 end
