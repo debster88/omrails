@@ -4,8 +4,10 @@
     <div class="col-md-4">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">Your Account</h5>
-          <p class="card-text"><% link_to current_user. username %></p>
+          <% if user_signed_in? %>
+            <h5 class="card-title">Your Account</h5>
+            <p class="card-text"><% link_to current_user. username %></p>
+          <% end %>
         </div>
       </div>
       <div class="col-md-8">

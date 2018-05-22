@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_many :tweets
   has_many :items
   
-  #acts_as_followable
-  #acts_as_follower
+  acts_as_followable
+  acts_as_follower
+  acts_as_voter
 end

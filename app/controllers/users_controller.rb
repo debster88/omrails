@@ -9,15 +9,15 @@ class UsersController < ApplicationController
     @user = User.where(username: params[:username]).first
     
     #@tweets = Tweet.where(user_id: @user.id) rescue nil
-    @tweets = @user.tweets
+    @tweets = @user.tweets rescue nil
     
     logger.info "******** USER JSON: *********"
     logger.info @user.to_json
     logger.info "*****************************"
     
-    if @user.nil?
-      redirect_to :back 
-    end
+   # if @user.nil?
+    #  redirect_to :back 
+    #end
     
   end
 end
